@@ -1,0 +1,7 @@
+<%= form_for [@order, @item] do |f| %>
+    <%= f.label 'NSN' %>
+    <%= f.text_field :nsn %>
+    <%= f.label 'Nomen' %>
+    <%= f.text_field :nomen %>
+    <%= f.submit %>
+<% end %>  

@@ -1,0 +1,19 @@
+<h1>Orders Viewer</h1>
+<table class="table">
+    <tr>
+        <th>Document Number</th>
+        <th>Status</th>
+        <th>Created on</th>
+        <th>Updated on</th>
+    </tr>
+    <% @orders.each do |order| %>
+    <tr>
+        <td><%= link_to order.docnum, order, class: 'btn btn-default' %></td>
+        <td><%= order.status %></td>
+        <td><%= order.created_at %></td>
+        <td><%= order.updated_at %></td>
+    </tr>
+    <% end %>
+    
+</table>
+<%= link_to 'New order', new_order_path, class: 'btn btn-success' %>

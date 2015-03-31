@@ -1,0 +1,7 @@
+<%= form_for @order do  |f| %>
+    <%= f.label 'DocNum' %>
+    <%= f.text_field :docnum %>
+    <%= f.label 'Status' %>
+    <%= f.select :status, [['New','new'],['Received','received'],['Submitted','submitted'],['Received','received'],['Issued','issued']] %>
+    <%= f.submit %>
+<% end %>  
